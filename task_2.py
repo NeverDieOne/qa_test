@@ -20,6 +20,7 @@ def get_available_languages():
 
         if len(lang_code) > 5:  # чтобы исключить попадание "coinmarketcap.com" в список и добавить туда английский
             available_langs.append("en")
+            continue
 
         available_langs.append(lang_code)
 

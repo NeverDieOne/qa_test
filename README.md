@@ -44,6 +44,10 @@
 5. Создать файл `.env` в корне проекта со следующими переменными:
     * `API_KEY`: ключ доступа от API [Coinmarketcap](https://coinmarketcap.com/api/)
     
+## Установка драйвера Chromedriver
+[Русский гайд по установке](https://selenium-python.com/install-chromedriver-chrome)
+    
+    
 ## Запуск тестов
 
 Запуск теста из 1ого задания: 

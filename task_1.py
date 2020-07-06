@@ -45,13 +45,13 @@ async def get_latest_value(count=10):
             print(e)
 
 
-async def async_test_one(count=8):
+async def async_test_time_response_and_response_size_and_relevance_data(count=8):
     """Запуск первого теста count раз.
     Расчет RPS.
     Расчет 80% latency
     """
     start_time = time.time()
-    time_for_response = await asyncio.gather(*(test_1() for _ in range(count)))
+    time_for_response = await asyncio.gather(*(test_time_response_and_response_size_and_relevance_data() for _ in range(count)))
     finish_time = time.time()
 
     rps = count / (finish_time - start_time)
@@ -63,7 +63,7 @@ async def async_test_one(count=8):
 
 
 @pytest.mark.asyncio
-async def test_1():
+async def test_time_response_and_response_size_and_relevance_data():
     """Тест на время запроса, размер ответа и актуальность полученных данных.
     Успешен если:
         Ответ получен менее чем за 500 мс.
@@ -84,7 +84,7 @@ async def test_1():
     return time_for_response
 
 
-def test_2():
+def test_rps_and_time_response():
     """Асинхронный тест RPS и времени ответа от сервера.
     Успешен если:
         Запущенный тест №1 выполнился успешно.

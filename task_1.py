@@ -18,7 +18,7 @@ def get_percentile(data, percentile):
 
 
 async def get_latest_value(count=10):
-    """Получение данных о 10 тикерах с наибольшим объемом за последние 24 часа"""
+    """Получение данных о count тикерах с наибольшим объемом за последние 24 часа"""
     parameters = {
         'start': '1',
         'limit': count,

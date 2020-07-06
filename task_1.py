@@ -69,6 +69,8 @@ async def test_time_response_and_response_size_and_relevance_data():
         Ответ получен менее чем за 500 мс.
         Размер ответа меньше 10 кб.
         Данные получены за сегодняшний день
+    Возвращает:
+        Время на запрос для расчета RPS в асинхронном тесте.
     """
     time_for_response, response_size, currency_updated_list = await get_latest_value()
 
